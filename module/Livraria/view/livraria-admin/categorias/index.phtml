@@ -1,0 +1,20 @@
+<h1> Categorias </h1>
+<br>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Ação</th>
+    </tr>
+    <ul>
+        <?php foreach ($this->data as $entity): ?>
+            <tr>
+                <td> <?php echo $entity->getId(); ?></td>
+
+                <td> <?php echo $entity->getNome(); ?></td>
+            </tr>
+        <?php endforeach; ?>        
+    </ul>
+</table>
+<br>
+<?php echo $this->paginationControl($this->data,'sliding','paginator');?>
